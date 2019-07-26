@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Youtube</title>
+</head>
+<style>
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: #ffffff;
+        background-color: #47474d;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 20;
+    }
+
+    #Youtube {
+        position: absolute;
+        width: 1828px;
+        height: 50px;
+        font-size: 40px;
+        color: #ffffff;
+        background-color: #1b2222;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+    }
+
+    #login-form {
+        position: absolute;
+        top: 200px;
+        left: 350px;
+        color:#000000;
+        background-color: #ffffff;
+        border: 1px solid #8f8f8f;
+        border-radius: 10px;
+        width: 350px;
+        height: 450px;
+        padding: 20px;
+    }
+
+    #register-form {
+        position: absolute;
+        top: 200px;
+        left: 1100px;
+        color: #000000;
+        background-color: #ffffff;
+        border: 1px solid #8f8f8f;
+        border-radius: 10px;
+        width: 350px;
+        height: 450px;
+        padding: 23px;
+    }
+
+    #login {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    #register {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    input[type=submit] {
+        position: absolute;
+        top: 390px;
+        left: 27px;
+        border: none;   
+        background-color: #a8a8a8;
+        color: #000000;
+        height: 50px;
+        width: 300px;
+        margin: 16px;
+        font-size: 20;
+        border-radius: 4px;
+    }
+
+    input[type=text] {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        outline: 0;
+        background-color: transparent;
+        color: #000000;
+        font-size: 20;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 7px;
+        border-radius: 5px;
+    }
+
+    input[type=password] {
+        border: 1px solid rgba(0,0,0,0.2);
+        outline: 0;
+        background-color: transparent;
+        color: #000000;
+        font-size: 20;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 7px;
+        border-radius: 5px;
+    }
+
+    #loginerror {
+        position: absolute;
+        top: 800px;
+        width: 1853px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 20;
+    }
+
+    #error {
+        position: absolute;
+        top: 800px;
+        width: 1853px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 20;
+    }
+</style>
+
+<body>
+    <div id="error">
+        {{message}}
+        {{register}}
+        {{email}}<br>
+        {{password}}
+    </div>
+    <div id="loginerror">
+        {{loginerror}}
+    </div>
+    <div id="Youtube">
+        Youtube
+    </div>
+    <form id="login-form" method="post" action="/login">
+        <div id="login">
+            Login
+        </div>
+        Email<br>
+        <input type="text" name="email" required><br>
+        Password<br>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+    <form id="register-form" method="post" action="/register">
+        <div id="register">
+            Register
+        </div>
+        Email<br>
+        <input type="text" name="email" required><br>
+        Name<br>
+        <input type="text" name="name" required><br>
+        Password<br>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+
+</html>

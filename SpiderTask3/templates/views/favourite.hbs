@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <title>Youtube</title>
+    <meta charset="utf-8">
+</head>
+<style>
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: #000000;
+        background-color: #47474d;
+        ;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20;
+    }
+
+    #Youtube {
+        width: 1828px;
+        height: 50px;
+        font-size: 40px;
+        color: #ffffff;
+        background-color: #1b2222;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+    }
+
+    #back {
+        position: absolute;
+        top: 20px;
+        right: 80px;
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        border-radius: 2px;
+        outline: 0;
+        color: #ffffff;
+        font-size: 25;
+    }
+    #noItems {
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: bold;
+        position: absolute;
+        top: 200px;
+        left: 800px;
+    }
+
+    #totalQty {
+        position: absolute;
+        top: 25px;
+        right: 200px;
+        color: #ffffff;
+        font-size: 25px;
+    }
+
+    .video {
+        position: relative;
+        width: 1600px;
+        display: inline-block;
+        height: 400px;
+        border: 1px solid #ddd;
+        margin: 10px;
+        padding: 20px;
+        font-size: 1em;
+        overflow: auto;
+        margin-left: 90px;
+    }
+
+    .img {
+        position: absolute;
+        left: 35px;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        position: absolute;
+        top: 300px;
+        left: 35px;
+        color: #ffffff;
+        width: 1100px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .des {
+        position: absolute;
+        top: 380px;
+        left: 40px;
+        color: #ffffff;
+        width: 1000px;
+    }
+
+    .view {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 200px;
+        height: 50px;
+        background-color: #fdcf00;
+        border: 0;
+        outline: 0;
+        border-radius: 2px;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div id="Youtube">
+        Youtube
+        <form method="get" action="/users">
+            <input id="back" type="submit" value="Back">
+        </form>
+        <div id="totalQty">Favourites : {{totalQty}}</div>
+    </div>
+    {{#if favourite }}
+    <table id="fav">
+        {{#each favourite}}
+        <div class="video">
+            <img class="img" src={{this.video.videoImg}} style="height: 250px; width: 350px;"><br>
+            <span class="title">{{this.video.videoTitle}}</span><br>
+            <span class="des">{{this.video.videoDes}}</span><br>
+            <form method="post" action="/view">
+                <input class="view" type="submit" value="View">
+            </form>
+        </div>
+        {{/each}}
+    </table>
+    {{else}}
+    <div id="noItems">
+        <h2>No Favourites</h2>
+    </div>
+    {{/if}}
+
+</body>
+
+</html>

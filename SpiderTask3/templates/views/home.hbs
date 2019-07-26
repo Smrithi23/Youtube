@@ -1,0 +1,403 @@
+<html>
+
+<head>
+    <title>Youtube</title>
+    <meta charset="utf-8">
+</head>
+<style>
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: #000000;
+        background-color: #47474d;
+        ;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20;
+    }
+
+    #Youtube {
+        position: absolute;
+        width: 1828px;
+        height: 50px;
+        font-size: 40px;
+        color: #ffffff;
+        background-color: #1b2222;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+    }
+
+    #welcome {
+        position: absolute;
+        top: 25px;
+        right: 50px;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    #options {
+        position: absolute;
+        top: 71px;
+        background-color: #808080;
+        height: 50px;
+        width: 1853px;
+        color: #ffffff;
+    }
+
+    #myAccount {
+        position: absolute;
+        top: 13px;
+        right: 425px;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        color: #ffffff;
+        font-size: 20;
+    }
+
+    #logout {
+        position: absolute;
+        top: 13px;
+        right: 320px;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        color: #ffffff;
+        font-size: 20;
+    }
+
+    #logoutAll {
+        position: absolute;
+        top: 13px;
+        right: 80px;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        color: #ffffff;
+        font-size: 20;
+    }
+
+    #favourite {
+        position: absolute;
+        top: 13px;
+        left: 80px;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        color: #ffffff;
+        font-size: 20;
+    }
+
+    #wantTowatch {
+        position: absolute;
+        top: 13px;
+        left: 200px;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        color: #ffffff;
+        font-size: 20;
+    }
+
+    #watched {
+        position: absolute;
+        top: 13px;
+        left: 370px;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        color: #ffffff;
+        font-size: 20;
+    }
+
+    #searchbar {
+        position: absolute;
+        top: 170px;
+        left: 390px;
+    }
+
+    #searchitem {
+        position: absolute;
+        height: 40px;
+        width: 1000px;
+        background-color: #ffffff;
+        border: 0;
+        border-radius: 3px;
+        outline: 0;
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    #search {
+        position: absolute;
+        left: 980px;
+        height: 40px;
+        width: 40px;
+        background-color: #fdcf00;
+        background-image: url('../pics/search.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        margin: 0px;
+        outline: 0px;
+        border: 0px;
+        border-left: 7px solid #fdcf00;
+        border-top: 5px solid #fdcf00;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+
+    .box {
+        position: relative;
+        width: 1600px;
+        display: inline-block;
+        height: 400px;
+        border: 1px solid #ddd;
+        margin: 10px;
+        padding: 20px;
+        font-size: 1em;
+        overflow: auto;
+    }
+
+    .button1 {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 200px;
+        height: 50px;
+        background-color: #fdcf00;
+        border: 0;
+        outline: 0;
+        border-radius: 2px;
+        font-size: 20px;
+    }
+
+    .button2 {
+        position: absolute;
+        top: 150px;
+        right: 20px;
+        width: 200px;
+        height: 50px;
+        background-color: #fdcf00;
+        border: 0;
+        outline: 0;
+        border-radius: 2px;
+        font-size: 20px;
+    }
+
+    .button3 {
+        position: absolute;
+        top: 250px;
+        right: 20px;
+        width: 200px;
+        height: 50px;
+        background-color: #fdcf00;
+        border: 0;
+        outline: 0;
+        border-radius: 2px;
+        font-size: 20px;
+    }
+
+    .button4 {
+        position: absolute;
+        top: 350px;
+        right: 20px;
+        width: 200px;
+        height: 50px;
+        background-color: #fdcf00;
+        border: 0;
+        outline: 0;
+        border-radius: 2px;
+        font-size: 20px;
+    }
+
+    .img {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        color: #ffffff;
+        width: 1100px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .des {
+        color: #ffffff;
+        width: 1000px;
+    }
+
+    .output {
+        position: absolute;
+        top: 250px;
+        left: 75px;
+
+    }
+
+    .prev {
+        position: absolute;
+        top: 170px;
+        right: 150px;
+        border: 0;
+        outline: 0;
+        background-color:#fdcf00;
+        color: #000000;
+        height: 40px;
+        width: 80px;
+        font-size: 20px;
+        border-radius: 3px;
+    }
+
+    .next {
+        position: absolute;
+        top: 170px;
+        right: 50px;
+        border: 0;
+        outline: 0;
+        background-color:#fdcf00;
+        color: #000000;
+        height: 40px;
+        width: 80px;
+        font-size: 20px;
+        border-radius: 3px;
+    }
+</style>
+
+<body>
+
+    <div id="Youtube">
+        Youtube
+    </div>
+    <div id="welcome">
+        Welcome {{user.name}}
+    </div>
+    <div id="options">
+        <form method="get" action="/favourite">
+            <input id="favourite" type="submit" value="Favourite   |">
+        </form>
+        <form method="get" action="/wantTowatch">
+            <input id="wantTowatch" type="submit" value="Want To Watch   |">
+        </form>
+        <form method="get" action="/watched">
+            <input id="watched" type="submit" value="Watched">
+        </form>
+        <form method="get" action="/users/me">
+            <input id="myAccount" type="submit" value="My Account   |">
+        </form>
+        <form method="post" action="/users/logout">
+            <input id="logout" type="submit" value="Logout   |">
+        </form>
+        <form method="post" action="/users/logoutAll">
+            <input id="logoutAll" type="submit" value="Logout from all sessions">
+        </form>
+    </div>
+    <div id="searchbar">
+        <input id="searchitem" type="text" placeholder="Search">
+        <button id="search" value=""></button>
+    </div>
+    <div class="output"></div>
+    <script>
+        const api = 'AIzaSyDK8OAHPT5XfXKvqtVK5-GU1ZPWOoMfV3Y';
+        const output = document.querySelector('.output');
+        const searchTerm = document.querySelector('#searchitem');
+
+        const btnPrev = document.createElement('button');
+        btnPrev.setAttribute('disabled', true);
+        btnPrev.textContent = 'Prev';
+        btnPrev.className = 'prev'
+        document.body.appendChild(btnPrev);
+        const btnNext = document.createElement('button');
+        btnNext.setAttribute('disabled', true);
+        btnNext.textContent = 'Next';
+        btnNext.className = 'next'
+        document.body.appendChild(btnNext);
+        const btns = document.querySelectorAll('button');
+        btns.forEach(function (btn) {
+            btn.addEventListener('click', ySearch);
+        })
+
+        function ySearch(e) {
+            let search = searchTerm.value;
+            console.log(e.target.token);
+            search = encodeURIComponent(search);
+            let url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key=' + api + '&q=' + search + '&maxResults=10';
+            if (e.target.token) {
+                url += '&pageToken=' + e.target.token;
+            }
+            //output.textContent = url;
+            fetch(url).then(function (rep) {
+                return rep.json()
+            }).then(function (data) {
+                if (data.prevPageToken) {
+                    btnPrev.token = data.prevPageToken;
+                    btnPrev.disabled = false;
+                } else {
+                    btnPrev.token = false;
+                    btnPrev.disabled = true;
+                }
+                if (data.nextPageToken) {
+                    btnNext.token = data.nextPageToken;
+                    btnNext.disabled = false;
+                } else {
+                    btnNext.token = false;
+                    btnNext.disabled = true;
+                }
+                return data.items.map(function (x) {
+                    return {
+                        title: x.snippet.title,
+                        des: x.snippet.description,
+                        img: x.snippet.thumbnails.default.url,
+                        id: x.id.videoId,
+                        x: x
+                    }
+                })
+            }).then(function (arr) {
+                show(arr);
+            }).catch(function (error) {
+                console.log(error);
+            })
+        }
+
+        function show(data) {
+            console.log(data);
+            console.log(data.length);
+            output.innerHTML = '';
+            data.forEach(function (video) {
+                console.log(video);
+                let div = document.createElement('div');
+                div.classList.add('box');
+                let temp = document.createElement('span');
+                temp.innerHTML = '<div class="des">'+video.des+'</div>'
+                let span1 = document.createElement('span');
+                span1.innerHTML = '<div class="title">'+video.title+'</div><br><br>';
+                let span2 = document.createElement('span');
+                span2.innerHTML = '<img class="img" src="'+video.img+'" style="height: 250px; width: 350px;"><br>';
+                let span3 = document.createElement('span');
+                span3.innerHTML = '<form method="post" action="/view"><input class="hide" name="videoId" type="text" value="' + video.id + '"><input class="hide" name="videoTitle" type="text" value="' + video.title + '"><input class="hide" name="videoDes" type="text" value="' + video.des + '"><input class="button1" type="submit" value="View"></form>'
+                let span4 = document.createElement('span');
+                span4.innerHTML = '<form method="post" action="/favourite"><input class="hide" name="videoImg" type="text" value="' + video.img + '"><input class="hide" name="videoId" type="text" value="' + video.id + '"><input class="hide" name="videoTitle" type="text" value="' + video.title + '"><input class="hide" name="videoDes" type="text" value="' + video.des + '"><input class="button2" type="submit" value="Add to Favourites"></form>'
+                let span5 = document.createElement('span');
+                span5.innerHTML = '<form method="post" action="/watched"><input class="hide" name="videoImg" type="text" value="' + video.img + '"><input class="hide" name="videoId" type="text" value="' + video.id + '"><input class="hide" name="videoTitle" type="text" value="' + video.title + '"><input class="hide" name="videoDes" type="text" value="' + video.des + '"><input class="button3" type="submit" value="Mark as Watched"></form>'
+                let span6 = document.createElement('span');
+                span6.innerHTML = '<form method="post" action="/wantTowatch"><input class="hide" name="videoImg" type="text" value="' + video.img + '"><input class="hide" name="videoId" type="text" value="' + video.id + '"><input class="hide" name="videoTitle" type="text" value="' + video.title + '"><input class="hide" name="videoDes" type="text" value="' + video.des + '"><input class="button4" type="submit" value="Want to Watch"></form>'
+
+                div.appendChild(span2);
+                div.appendChild(span1);
+                div.appendChild(temp);
+                div.appendChild(span3);
+                div.appendChild(span4);
+                div.appendChild(span5);
+                div.appendChild(span6);
+                output.appendChild(div);
+                var array = document.getElementsByClassName('hide');
+                var length = array.length;
+                for (var i = 0; i < length; i++) {
+                    array[i].style.display = 'none';
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

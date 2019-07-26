@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <title>Youtube</title>
+    <meta charset="utf-8">
+</head>
+<style>
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: #000000;
+        background-color: #47474d;
+        ;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20;
+    }
+
+    #Youtube {
+        position: absolute;
+        width: 1828px;
+        height: 50px;
+        font-size: 40px;
+        color: #ffffff;
+        background-color: #1b2222;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+    }
+
+    #back {
+        position: absolute;
+        top: 20px;
+        right: 80px;
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        border-radius: 2px;
+        outline: 0;
+        color: #ffffff;
+        font-size: 25;
+    }
+
+    #updateProfile {
+        position: absolute;
+        top: 390px;
+        left: 27px;
+        border: none;
+        background-color: #a8a8a8;
+        color: #000000;
+        height: 50px;
+        width: 300px;
+        margin: 16px;
+        font-size: 20;
+        border-radius: 4px;
+    }
+
+    input[type=text] {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        outline: 0;
+        background-color: transparent;
+        color: #000000;
+        font-size: 20;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 7px;
+        border-radius: 5px;
+    }
+
+    input[type=password] {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        outline: 0;
+        background-color: transparent;
+        color: #000000;
+        font-size: 20;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 7px;
+        border-radius: 5px;
+    }
+
+    #form {
+        position: absolute;
+        top: 200px;
+        left: 720px;
+        color: #000000;
+        background-color: #ffffff;
+        border: 1px solid #8f8f8f;
+        border-radius: 10px;
+        width: 350px;
+        height: 450px;
+        padding: 23px;
+    }
+
+    #error {
+        width: 1853px;
+        text-align: center;
+        position: absolute;
+        top: 800px;
+        color: #ffffff;
+        font-size: 20;
+    }
+</style>
+
+<body>
+    <div id="error">
+        {{error}}
+    </div>
+    <div id="Youtube">
+        Youtube
+        <form method="get" action="/users">
+            <input id="back" type="submit" value="Back">
+        </form>
+    </div>
+
+    <form id="form" method="post" action="/users/me">
+        Name<br>
+        <input type="text" name="name" value="{{user.name}}" required><br>
+        Password<br>
+        <input type="password" name="password" required><br>
+        <input id="updateProfile" type="submit" value="Update Profile">
+    </form>
+</body>
+
+</html>

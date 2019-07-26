@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>Youtube</title>
+    <meta charset="utf-8">
+</head>
+<style>
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: #000000;
+        background-color: #47474d;
+        ;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20;
+    }
+
+    #Youtube {
+        position: absolute;
+        width: 1815px;
+        height: 50px;
+        font-size: 40px;
+        color: #ffffff;
+        background-color: #1b2222;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+    }
+
+    #back {
+        position: absolute;
+        top: 20px;
+        right: 80px;
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        border-radius: 2px;
+        outline: 0;
+        color: #ffffff;
+        font-size: 25;
+    }
+
+    #view {
+        position: absolute;
+        top: 130px;
+        left: 200px;
+    }
+
+    #title {
+        left: 80px;
+        font-size: 60px;
+        margin: 30px;
+        margin-left: 120px;
+        width: 1293px;
+    }
+
+    #video {
+        margin-left: 120px;
+        left: 110px;
+    }
+
+    #description {
+        width: 1293px;
+        margin-left: 120px;
+        margin-top: 30px;
+        padding-bottom: 200px;
+    }
+</style>
+
+
+<body>
+
+    <div id="Youtube">
+        Youtube
+        <form method="get" action="/users">
+            <input id="back" type="submit" value="Back">
+        </form>
+    </div>
+    <div id="view">
+        <div id="title" style="color: #ffffff">
+            {{title}}
+        </div><br>
+        <div id="video">
+            <iframe width="1200" height="700" src="https://www.youtube.com/embed/{{videoId}}" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+        <div id="description" style="color: #ffffff">
+            {{des}}
+        </div>
+    </div>
+
+</body>
+
+</html>
